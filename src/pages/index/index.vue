@@ -3,7 +3,7 @@
 		<img src="../../../static/logo.jpeg" alt="">
 		<h2>笔画测凶吉</h2>
 		<input type="text" v-model="name">
-		<button>点我测算</button>
+		<button @click='calc'>点我测算</button>
 		<div class="box">
 			<p class="text">{{result}}</p>
 		</div>
@@ -21,8 +21,16 @@ export default {
 			result:''
         };
 	},
-	mounted(){
-		console.log(cnchr.stroke('骄傲骄'))
+	onLoad(){
+		console.log(cnchr.stroke('不'))
+	},
+	methods:{
+		calc(){
+		}
+	},
+	watch:{
+		name(){
+		}
 	}
 };
 </script>
